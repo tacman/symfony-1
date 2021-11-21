@@ -65,7 +65,7 @@ jobs:
           - symfony-require: "4.4.*"
             php-version: "8.0"
             deps: "normal"
-            
+
           # Test against latest Symfony 5.1 stable on 7.3
           - symfony-require: "5.1.*"
             php-version: "7.3"
@@ -104,8 +104,8 @@ jobs:
           # Test against latest Symfony 5.1 stable on 7.4 deps normal
           - symfony-require: "5.1.*"
             php-version: "8.0"
-            deps: "normal"            
-            
+            deps: "normal"
+
           # Test against latest Symfony 5.2 stable on 7.3
           - symfony-require: "5.2.*"
             php-version: "7.3"
@@ -161,6 +161,16 @@ jobs:
             php-version: "8.0"
             deps: "dev"
 
+          # Test against latest Symfony 5.4 dev on 8.0
+          - symfony-require: "5.4.*"
+            php-version: "8.0"
+            deps: "dev"
+
+          # Test against latest Symfony 6.0 dev on 8.0
+          - symfony-require: "6.0.*"
+            php-version: "8.0"
+            deps: "dev"
+
           # Test bleeding edge
           - php-version: "8.0"
             deps: "dev"
@@ -205,7 +215,7 @@ jobs:
         with:
           name: "phpunit-${{ matrix.php-version }}-${{ matrix.deps }}-${{ hashFiles('composer.lock') }}.coverage"
           path: "coverage.xml"
-          
+
       - uses: codecov/codecov-action@v1
         with:
           verbose: true
