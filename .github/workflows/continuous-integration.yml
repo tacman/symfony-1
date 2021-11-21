@@ -19,6 +19,7 @@ jobs:
           - "7.3"
           - "7.4"
           - "8.0"
+          - "8.1"
         deps:
           - "normal"
         symfony-require:
@@ -159,7 +160,7 @@ jobs:
           # Test against latest Symfony 5.3 dev on 8.0
           - symfony-require: "5.3.*"
             php-version: "8.0"
-            deps: "dev"
+            deps: "low"
 
           # Test against latest Symfony 5.4 dev on 8.0
           - symfony-require: "5.4.*"
@@ -172,7 +173,7 @@ jobs:
             deps: "dev"
 
           # Test bleeding edge
-          - php-version: "8.0"
+          - php-version: "8.1"
             deps: "dev"
             symfony-deprecations-helper: "weak"
 
